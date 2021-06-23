@@ -8,6 +8,8 @@ import com.dicoding.salsahava.flixsource.core.data.source.remote.RemoteDataSourc
 import com.dicoding.salsahava.flixsource.core.data.source.remote.network.ApiService
 import com.dicoding.salsahava.flixsource.core.domain.repository.IFlixRepository
 import com.dicoding.salsahava.flixsource.core.utils.AppExecutors
+import net.sqlcipher.database.SQLiteDatabase
+import net.sqlcipher.database.SupportFactory
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import org.koin.android.ext.koin.androidContext
@@ -19,11 +21,16 @@ import java.util.concurrent.TimeUnit
 val databaseModule = module {
     factory { get<FlixDatabase>().flixDao() }
     single {
+        val passphrase: ByteArray = SQLiteDatabase.getBytes("havafs".toCharArray())
+        val factory = SupportFactory(passphrase)
+
         Room.databaseBuilder(
             androidContext(),
             FlixDatabase::class.java,
             "Flix.db"
-        ).fallbackToDestructiveMigration().build()
+        ).fallbackToDestructiveMigration()
+            .openHelperFactory(factory)
+            .build()
     }
 }
 

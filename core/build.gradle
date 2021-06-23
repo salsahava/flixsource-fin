@@ -58,6 +58,8 @@ dependencies {
     kapt 'androidx.room:room-compiler:2.3.0'
     implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.3.1'
     api 'androidx.lifecycle:lifecycle-livedata-ktx:2.3.1'
+    implementation 'net.zetetic:android-database-sqlcipher:4.4.0'
+    implementation 'androidx.sqlite:sqlite-ktx:2.1.0'
 
     // Testing
     testImplementation 'org.mockito:mockito-core:3.6.0'
