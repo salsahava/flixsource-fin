@@ -59,7 +59,11 @@ class MovieAdapter : RecyclerView.Adapter<MovieAdapter.ItemViewHolder>() {
                 try {
                     onItemClick?.invoke(movieList[absoluteAdapterPosition])
                 } catch (e: Exception) {
-                    Toast.makeText(itemView.context, "Something went wrong. Please go back to Movies and try again.", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(
+                        itemView.context,
+                        "Something went wrong. Please go back to Movies and try again.",
+                        Toast.LENGTH_SHORT
+                    ).show()
                 }
             }
         }
