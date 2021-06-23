@@ -20,10 +20,6 @@ import java.util.*
 
 class DetailActivity : AppCompatActivity() {
 
-    companion object {
-        const val EXTRA_FLIX = "extra_flix"
-    }
-
     private lateinit var activityDetailBinding: ActivityDetailBinding
     private lateinit var detailContentBinding: ContentDetailBinding
 
@@ -150,5 +146,9 @@ class DetailActivity : AppCompatActivity() {
 
     private fun showErrorToast() {
         Toast.makeText(applicationContext, "Something went wrong", Toast.LENGTH_SHORT).show()
+    }
+
+    companion object {
+        const val EXTRA_FLIX = "extra_flix"
     }
 }

@@ -43,15 +43,6 @@
         app:layout_constraintTop_toBottomOf="@+id/tv_title"
         tools:text="@tools:sample/cities" />
 
-    <!--    <include-->
-    <!--        android:id="@+id/cv_rating"-->
-    <!--        layout="@layout/card_rating"-->
-    <!--        android:layout_width="wrap_content"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:layout_marginTop="16dp"-->
-    <!--        app:layout_constraintStart_toStartOf="parent"-->
-    <!--        app:layout_constraintTop_toBottomOf="@+id/tv_genre" />-->
-
     <include
         android:id="@+id/cv_score"
         layout="@layout/card_score"
