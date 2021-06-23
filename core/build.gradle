@@ -19,7 +19,7 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
 
-        buildConfigField("String", "TMDB_API_KEY", "Find the API KEY in local.properties")
+        buildConfigField("String", "TMDB_API_KEY", "\"73a02489c683bf576b29479bfbd6a8ec\"")
     }
 
     buildTypes {
