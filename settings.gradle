@@ -1,0 +1,4 @@
+include ':app'
+rootProject.name = "FlixSource"
+include ':core'
+include ':favorites'
